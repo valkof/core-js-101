@@ -105,6 +105,7 @@ function chainPromises(array, action) {
 
     function prom(i) {
       if (i === array.length) resolve(p.reduce(action));
+      if (typeof array[i] === 'undefined') return;
       array[i].then((rez) => {
         p.push(rez);
         prom(i + 1);
