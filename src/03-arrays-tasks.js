@@ -595,8 +595,8 @@ function getElementByIndexes(arr, indexes) {
  *
  */
 function swapHeadAndTail(arr) {
+  const l2 = Math.ceil(arr.length / 2);
   return arr.map((el, i) => {
-    const l2 = Math.ceil(arr.length / 2);
     if (i + 1 === (arr.length + 1) / 2) return el;
     const index = l2 + i >= arr.length ? i - l2 : l2 + i;
     return arr[index];
